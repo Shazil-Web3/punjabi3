@@ -19,7 +19,7 @@ const Wholesale = () => {
     { 
       name: "Garam Masala",
       description: "A perfect blend of ground spices including cardamom, cinnamon, cloves, and black pepper.",
-      image: "/public/spices/mount.png",
+      image: "/Spices/mount.png",
       price5kg: "45",
       price10kg: "85",
       price25kg: "180",
@@ -30,7 +30,7 @@ const Wholesale = () => {
       bulk: "25kg",
       price: "$150/box",
       description: "Pure ground turmeric root with intense yellow color and earthy flavor. Known for its anti-inflammatory properties.",
-      image: "/public/spices/mount.png",
+      image: "/Spices/mount.png",
       benefits: ["Anti-inflammatory", "Natural color", "High curcumin content"],
       origin: "Punjab, India"
     },
@@ -39,7 +39,7 @@ const Wholesale = () => {
       bulk: "20kg",
       price: "$200/box",
       description: "Whole cumin seeds with intense aroma and slightly bitter, warm flavor. A staple in Indian cuisine.",
-      image: "/public/spices/mount.png",
+      image: "/Spices/mount.png",
       benefits: ["Aids digestion", "Rich in iron", "Natural preservative"],
       origin: "Punjab, India"
     },
@@ -48,7 +48,7 @@ const Wholesale = () => {
       bulk: "15kg",
       price: "$350/box",
       description: "Premium green cardamom pods with sweet, intense aroma. Perfect for both savory dishes and desserts.",
-      image: "/public/spices/mount.png",
+      image: "/Spices/mount.png",
       benefits: ["Sweet aroma", "Versatile use", "Premium quality"],
       origin: "Punjab, India"
     },
@@ -57,7 +57,7 @@ const Wholesale = () => {
       bulk: "25kg",
       price: "$175/box",
       description: "A tangy spice blend featuring black salt, cumin, and amchur. Adds zesty flavor to snacks and street food.",
-      image: "/public/spices/mount.png",
+      image: "/Spices/mount.png",
       benefits: ["Tangy flavor", "Digestive aid", "Versatile blend"],
       origin: "Punjab, India"
     },
@@ -66,7 +66,7 @@ const Wholesale = () => {
       bulk: "20kg",
       price: "$250/box",
       description: "Premium black peppercorns with strong aroma and sharp, woody flavor. Essential for any kitchen.",
-      image: "/public/spices/mount.png",
+      image: "/Spices/mount.png",
       benefits: ["High piperine content", "Natural preservative", "Premium grade"],
       origin: "Punjab, India"
     },
@@ -76,7 +76,7 @@ const Wholesale = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <div className="relative h-[50vh] bg-[#FABC3F]">
-        <div className="absolute inset-0 bg-[url('/public/spices/wholesale-hero.jpg')] bg-cover bg-center opacity-30 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-[url('/Spices/wholesale-hero.jpg')] bg-cover bg-center opacity-30 mix-blend-multiply" />
         <Navbar />
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">

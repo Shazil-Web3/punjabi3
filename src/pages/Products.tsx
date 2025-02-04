@@ -44,7 +44,7 @@ const Products = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <div className="relative h-[50vh] bg-[#FABC3F]">
-        <div className="absolute inset-0 bg-[url('/spices/products-hero.jpg')] bg-cover bg-center opacity-30 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-[url('/Spices/products-hero.jpg')] bg-cover bg-center opacity-30 mix-blend-multiply" />
         <Navbar />
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">

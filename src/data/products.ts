@@ -7,7 +7,7 @@ export const products: Product[] = [
     price: "$8.99",
     pricePerKg: "$45/kg",
     rating: 4.5,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "masalas",
     description: "A blend of ground spices used in Indian cuisine"
   },
@@ -17,7 +17,7 @@ export const products: Product[] = [
     price: "$6.99",
     pricePerKg: "$35/kg",
     rating: 4.8,
-    image: "/public/spices/d2.png",
+    image: "/Spices/d2.png",
     category: "ground-spices",
     description: "Ground turmeric root with earthy flavor"
   },
@@ -27,7 +27,7 @@ export const products: Product[] = [
     price: "$5.99",
     pricePerKg: "$30/kg",
     rating: 4.7,
-    image: "/public/spices/d3.png",
+    image: "/Spices/d3.png",
     category: "whole-spices",
     description: "Whole cumin seeds with intense aroma"
   },
@@ -37,7 +37,7 @@ export const products: Product[] = [
     price: "$12.99",
     pricePerKg: "$65/kg",
     rating: 4.9,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "whole-spices",
     description: "Green cardamom pods for authentic flavor"
   }
@@ -50,7 +50,7 @@ export const moreProducts: Product[] = [
     price: "$7.99",
     pricePerKg: "$40/kg",
     rating: 4.6,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "masalas",
     description: "Tangy spice blend for snacks and street food"
   },
@@ -60,7 +60,7 @@ export const moreProducts: Product[] = [
     price: "$5.99",
     pricePerKg: "$30/kg",
     rating: 4.4,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "ground-spices",
     description: "Freshly ground coriander seeds"
   },
@@ -70,7 +70,7 @@ export const moreProducts: Product[] = [
     price: "$9.99",
     pricePerKg: "$50/kg",
     rating: 4.8,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "whole-spices",
     description: "Premium black peppercorns"
   },
@@ -80,7 +80,7 @@ export const moreProducts: Product[] = [
     price: "$8.99",
     pricePerKg: "$45/kg",
     rating: 4.7,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "specialty",
     description: "Authentic tandoor-style spice blend"
   }
@@ -91,7 +91,7 @@ export const moreProducts: Product[] = [
     price: "$8.99",
     pricePerKg: "$45/kg",
     rating: 4.7,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "specialty",
     description: "Authentic tandoor-style spice blend"
   }
@@ -102,7 +102,7 @@ export const moreProducts: Product[] = [
     price: "$8.99",
     pricePerKg: "$45/kg",
     rating: 4.7,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "specialty",
     description: "Authentic tandoor-style spice blend"
   }
@@ -113,7 +113,7 @@ export const moreProducts: Product[] = [
     price: "$8.99",
     pricePerKg: "$45/kg",
     rating: 4.7,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "specialty",
     description: "Authentic tandoor-style spice blend"
   }
@@ -124,7 +124,7 @@ export const moreProducts: Product[] = [
     price: "$8.99",
     pricePerKg: "$45/kg",
     rating: 4.7,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "specialty",
     description: "Authentic tandoor-style spice blend"
   }
@@ -135,7 +135,7 @@ export const moreProducts: Product[] = [
     price: "$8.99",
     pricePerKg: "$45/kg",
     rating: 4.7,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "specialty",
     description: "Authentic tandoor-style spice blend"
   }
@@ -146,7 +146,7 @@ export const moreProducts: Product[] = [
     price: "$8.99",
     pricePerKg: "$45/kg",
     rating: 4.7,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "specialty",
     description: "Authentic tandoor-style spice blend"
   }
@@ -157,7 +157,7 @@ export const moreProducts: Product[] = [
     price: "$8.99",
     pricePerKg: "$45/kg",
     rating: 4.7,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "specialty",
     description: "Authentic tandoor-style spice blend"
   }
@@ -179,7 +179,7 @@ export const moreProducts: Product[] = [
     price: "$8.99",
     pricePerKg: "$45/kg",
     rating: 4.7,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "specialty",
     description: "Authentic tandoor-style spice blend"
   }
@@ -190,7 +190,7 @@ export const moreProducts: Product[] = [
     price: "$8.99",
     pricePerKg: "$45/kg",
     rating: 4.7,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "specialty",
     description: "Authentic tandoor-style spice blend"
   }
@@ -201,7 +201,7 @@ export const moreProducts: Product[] = [
     price: "$8.99",
     pricePerKg: "$45/kg",
     rating: 4.7,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "specialty",
     description: "Authentic tandoor-style spice blend"
   }
@@ -212,7 +212,7 @@ export const moreProducts: Product[] = [
     price: "$8.99",
     pricePerKg: "$45/kg",
     rating: 4.7,
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     category: "specialty",
     description: "Authentic tandoor-style spice blend"
   }

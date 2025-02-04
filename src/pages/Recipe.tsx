@@ -11,7 +11,7 @@ export const recipes = [
     time: "45 mins",
     difficulty: "Medium",
     servings: 4,
-    image: "/public/spices/main-food.jpg",
+    image: "/Spices/main-food.jpg",
     description: "Creamy, rich and packed with authentic Indian flavors",
     category: "Main Course",
     ingredients: [
@@ -35,7 +35,7 @@ export const recipes = [
     time: "30 mins",
     difficulty: "Easy",
     servings: 3,
-    image: "/public/spices/main-food.jpg",
+    image: "/Spices/main-food.jpg",
     description: "Creamy spinach curry with fresh cottage cheese",
     category: "Vegetarian",
     ingredients: [
@@ -59,7 +59,7 @@ export const recipes = [
     time: "50 mins",
     difficulty: "Medium",
     servings: 6,
-    image: "/public/spices/main-food.jpg",
+    image: "/Spices/main-food.jpg",
     description: "Creamy black lentils slow-cooked to perfection",
     category: "Vegetarian",
     ingredients: [
@@ -82,7 +82,7 @@ export const recipes = [
     time: "60 mins",
     difficulty: "Hard",
     servings: 8,
-    image: "/public/spices/main-food.jpg",
+    image: "/Spices/main-food.jpg",
     description: "Aromatic rice dish layered with spiced chicken",
     category: "Main Course",
     ingredients: [
@@ -106,7 +106,7 @@ export const recipes = [
     time: "25 mins",
     difficulty: "Easy",
     servings: 10,
-    image: "/public/spices/main-food.jpg",
+    image: "/Spices/main-food.jpg",
     description: "Traditional Indian flatbread",
     category: "Appetizers",
     ingredients: [
@@ -129,7 +129,7 @@ export const recipes = [
     time: "40 mins",
     difficulty: "Medium",
     servings: 6,
-    image: "/public/spices/main-food.jpg",
+    image: "/Spices/main-food.jpg",
     description: "Spicy chickpea curry, a Punjabi classic",
     category: "Main Course",
     ingredients: [
@@ -152,7 +152,7 @@ export const recipes = [
     time: "45 mins",
     difficulty: "Medium",
     servings: 8,
-    image: "../spices/main-food.jpg",
+    image: "/Spices/main-food.jpg",
     description: "Traditional carrot dessert with cardamom",
     category: "Desserts",
     ingredients: [
@@ -175,7 +175,7 @@ export const recipes = [
     time: "60 mins",
     difficulty: "Hard",
     servings: 12,
-    image: "../spices/main-food.jpg",
+    image: "/Spices/main-food.jpg",
     description: "Crispy pastry filled with spiced potatoes",
     category: "Appetizers",
     ingredients: [
@@ -198,7 +198,7 @@ export const recipes = [
     time: "55 mins",
     difficulty: "Hard",
     servings: 6,
-    image: "../spices/main-food.jpg",
+    image: "/Spices/main-food.jpg",
     description: "Paneer dumplings in rich cream sauce",
     category: "Vegetarian",
     ingredients: [
@@ -221,7 +221,7 @@ export const recipes = [
     time: "40 mins",
     difficulty: "Medium",
     servings: 15,
-    image: "../spices/main-food.jpg",
+    image: "/Spices/main-food.jpg",
     description: "Sweet milk dumplings in rose syrup",
     category: "Desserts",
     ingredients: [

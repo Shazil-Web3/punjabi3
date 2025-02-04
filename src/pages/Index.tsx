@@ -34,7 +34,7 @@ const Index = () => {
     id: 17,
     name: "Royal Saffron Threads",
     price: "$24.99",
-    image: "/public/spices/d3.png",
+    image: "/Spices/d3.png",
     description: "Premium grade Kashmir saffron threads with intense aroma",
     rating: 4.9,
     tag: "Premium",
@@ -43,7 +43,7 @@ const Index = () => {
     id: 18,
     name: "Black Cardamom Pods",
     price: "$12.99",
-    image: "/public/spices/d1.png",
+    image: "/Spices/d1.png",
     description: "Large, smoky flavored black cardamom pods",
     rating: 4.7,
     tag: "Authentic",
@@ -325,56 +325,56 @@ const Index = () => {
             id: 1,
             name: "Garam Masala",
             price: "$8.99",
-            image: "/public/spices/d1.png",
+            image: "/Spices/d1.png",
             category: "Masala Blends"
           },
           {
             id: 2,
             name: "Turmeric Powder",
             price: "$6.99",
-            image: "/public/spices/d2.png",
+            image: "/Spices/d2.png",
             category: "Ground Spices"
           },
           {
             id: 3,
             name: "Cumin Seeds",
             price: "$5.99",
-            image: "/public/spices/d3.png",
+            image: "/Spices/d3.png",
             category: "Whole Spices"
           },
           {
             id: 4,
             name: "Cardamom Pods",
             price: "$9.99",
-            image: "/public/spices/d2.png",
+            image: "/Spices/d2.png",
             category: "Whole Spices"
           },
           {
             id: 5,
             name: "Coriander Powder",
             price: "$6.99",
-            image: "/public/spices/d1.png",
+            image: "/Spices/d1.png",
             category: "Ground Spices"
           },
           {
             id: 6,
             name: "Chaat Masala",
             price: "$7.99",
-            image: "/public/spices/d3.png",
+            image: "/Spices/d3.png",
             category: "Masala Blends"
           },
           {
             id: 7,
             name: "Black Pepper",
             price: "$8.99",
-            image: "/public/spices/d3.png",
+            image: "/Spices/d3.png",
             category: "Whole Spices"
           },
           {
             id: 8,
             name: "Tandoori Mix",
             price: "$9.99",
-            image: "/public/spices/d3.png",
+            image: "/Spices/d3.png",
             category: "Specialty Mixes"
           }
         ].map((product) => (
@@ -457,7 +457,7 @@ const Index = () => {
 
         {/* GIF Animation */}
         <img 
-          src="/public/spices/fl.gif"
+          src="/Spices/fl.gif"
           alt="Spices Animation"
           className="w-64 h-64 relative z-10"
         />
@@ -471,7 +471,7 @@ const Index = () => {
         <div className="space-y-6">
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center shrink-0">
-              <img src="/public/spices/organic-unscreen.gif" alt="Premium Quality" className="w-8 h-8" />
+              <img src="/Spices/organic-unscreen.gif" alt="Premium Quality" className="w-8 h-8" />
             </div>
             <div>
               <h3 className="text-xl font-display font-bold text-spiceBrown mb-2">Premium Quality</h3>
@@ -481,7 +481,7 @@ const Index = () => {
           
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center shrink-0">
-              <img src="/public/spices/chef.gif" alt="Traditional Recipes" className="w-8 h-8" />
+              <img src="/Spices/chef.gif" alt="Traditional Recipes" className="w-8 h-8" />
             </div>
             <div>
               <h3 className="text-xl font-display font-bold text-spiceBrown mb-2">Traditional Recipes</h3>
@@ -491,7 +491,7 @@ const Index = () => {
           
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center shrink-0">
-              <img src="/publicspices/organic.gif" alt="Natural Ingredients" className="w-8 h-8" />
+              <img src="/Spices/organic.gif" alt="Natural Ingredients" className="w-8 h-8" />
             </div>
             <div>
               <h3 className="text-xl font-display font-bold text-spiceBrown mb-2">Natural Ingredients</h3>
@@ -550,7 +550,7 @@ const Index = () => {
             id: 9, 
             name: "Punjabi Garam Masala", 
             price: "$8.99", 
-            image: "/public/spices/d3.png",
+            image: "/Spices/d3.png",
             review: "The authentic taste of Punjab in every dish! ❤️",
             reviewer: "Rajesh",
             tag: "Bestseller"
@@ -559,7 +559,7 @@ const Index = () => {
             id: 10, 
             name: "Kashmiri Chili Powder", 
             price: "$7.99", 
-            image: "/public/spices/d1.png",
+            image: "/Spices/d1.png",
             review: "Perfect color and heat balance. Love it!",
             reviewer: "Priya",
             tag: "Popular"
@@ -568,7 +568,7 @@ const Index = () => {
             id: 11, 
             name: "Biryani Masala", 
             price: "$9.99", 
-            image: "/public/spices/d2.png",
+            image: "/Spices/d2.png",
             review: "Makes restaurant-style biryani at home!",
             reviewer: "Sarah",
             tag: "Favorite"
@@ -577,7 +577,7 @@ const Index = () => {
             id: 12, 
             name: "Panch Phoron", 
             price: "$6.99", 
-            image: "/public/spices/d3.png",
+            image: "/Spices/d3.png",
             review: "Essential blend for Bengali cuisine.",
             reviewer: "Amit",
             tag: "Traditional"
@@ -586,7 +586,7 @@ const Index = () => {
             id: 13, 
             name: "Sambar Powder", 
             price: "$7.99", 
-            image: "/public/spices/d1.png",
+            image: "/Spices/d1.png",
             review: "Authentic South Indian flavors!",
             reviewer: "Maya",
             tag: "Regional"
@@ -595,7 +595,7 @@ const Index = () => {
             id: 14, 
             name: "Butter Chicken Masala", 
             price: "$8.99", 
-            image: "/public/spices/d2.png",
+            image: "/Spices/d2.png",
             review: "Restaurant quality taste every time.",
             reviewer: "David",
             tag: "Classic"
@@ -604,7 +604,7 @@ const Index = () => {
             id: 15, 
             name: "Pav Bhaji Masala", 
             price: "$6.99", 
-            image: "/public/spices/d1.png",
+            image: "/Spices/d1.png",
             review: "Perfect street food flavor at home!",
             reviewer: "Neha",
             tag: "Street Food"
@@ -613,7 +613,7 @@ const Index = () => {
             id: 16, 
             name: "Chai Masala", 
             price: "$5.99", 
-            image: "/public/spices/d2.png",
+            image: "/Spices/d2.png",
             review: "Makes the perfect cup of masala chai.",
             reviewer: "Emma",
             tag: "Essential"
@@ -622,7 +622,7 @@ const Index = () => {
             id: 17, 
             name: "Himalayan Pink Salt", 
             price: "$7.99", 
-            image: "/public/spices/d3.png",
+            image: "/Spices/d3.png",
             review: "The finest mineral-rich salt I've ever used!",
             reviewer: "Michael",
             tag: "Premium"
@@ -631,7 +631,7 @@ const Index = () => {
             id: 18, 
             name: "Amchur Powder", 
             price: "$6.99", 
-            image: "/public/spices/d1.png",
+            image: "/Spices/d1.png",
             review: "Perfect tangy flavor for chaats and curries!",
             reviewer: "Anita",
             tag: "Traditional"
@@ -699,7 +699,7 @@ const Index = () => {
         Discover Our Recipes
       </h2>
       <img 
-        src="/public/spices/grind2.gif" 
+        src="/Spices/grind2.gif" 
         alt="Cooking" 
         className="w-20 h-20 object-contain"
       />
@@ -714,7 +714,7 @@ const Index = () => {
         >
           <div className="relative h-48">
             <img 
-              src={"/public/spices/spices logo.jpg"}
+              src={"/Spices/spices logo.jpg"}
               alt={recipe.name}
               className="w-full h-full object-cover"
             />
