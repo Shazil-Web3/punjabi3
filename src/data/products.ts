@@ -183,5 +183,23 @@ export const moreProducts: Product[] = [
     image: "/Spices/d1.png",
     category: "premium",
     description: "Delicate threads of saffron that bring rich color and flavor."
-  },
+  },{
+    id: 19,
+    name: "Saffron Threads",
+    price: "$24.99",
+    pricePerKg: "$500/kg",
+    rating: 5.0,
+    image: "/Spices/d1.png",
+    category: "premium",
+    description: "Delicate threads of saffron that bring rich color and flavor."
+  },{
+    id: 20,
+    name: "Saffron Threads",
+    price: "$24.99",
+    pricePerKg: "$500/kg",
+    rating: 5.0,
+    image: "/Spices/d1.png",
+    category: "premium",
+    description: "Delicate threads of saffron that bring rich color and flavor."
+  }
 ]

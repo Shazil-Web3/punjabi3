@@ -68,10 +68,10 @@ const Products = () => {
 
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl font-display font-bold text-spiceBrown mb-6">
+            <h2 className="text-4xl font-display font-bold text-white mb-6">
               Discover Our Spice Collection
             </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <p className="text-white text-lg leading-relaxed">
               Hand-picked and carefully curated spices that bring authentic Punjabi flavors to your kitchen.
               Each product is selected for its quality and authenticity.
             </p>

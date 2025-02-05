@@ -31,25 +31,7 @@ const Index = () => {
   const [searchResults, setSearchResults] = useState<Product[]>([]);
   const [isSearching, setIsSearching] = useState(false);
 
-  const allProducts = [...products, ...moreProducts, {
-    id: 17,
-    name: "Royal Saffron Threads",
-    price: "$24.99",
-    image: "/Spices/d3.png",
-    description: "Premium grade Kashmir saffron threads with intense aroma",
-    rating: 4.9,
-    tag: "Premium",
-    pricePerKg: "$999.60/kg"
-  }, {
-    id: 18,
-    name: "Black Cardamom Pods",
-    price: "$12.99",
-    image: "/Spices/d1.png",
-    description: "Large, smoky flavored black cardamom pods",
-    rating: 4.7,
-    tag: "Authentic",
-    pricePerKg: "$129.90/kg"
-  }];
+  
 
   React.useEffect(() => {
     if (!api) return;
@@ -108,19 +90,16 @@ const Index = () => {
       return;
     }
 
-    const filtered = allProducts.filter(product =>
-      product.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+   
     
-    setSearchResults(filtered);
-    setIsSearching(true);
+   
   };
 
   const carouselOptions: EmblaOptionsType = {
     align: "start",
     loop: true,
     skipSnaps: false,
-    slidesToScroll: 1,
+    slidesToScroll: 5,
     containScroll: "trimSnaps"
   };
 
@@ -147,7 +126,7 @@ const Index = () => {
     <div className="container mx-auto px-6 md:px-10 py-6">
       <div className="max-w-3xl text-center md:text-left content-transition">
         <h1
-          className="text-5xl md:text-7xl font-['BrushScript'] py-4 pt-10"
+          className="text-[10rem] md:text-[6rem] font-['BrushScript']  pt-10"
           style={{
             background: 'linear-gradient(to right, #FF6347, white)',
             WebkitBackgroundClip: 'text',
@@ -159,7 +138,7 @@ const Index = () => {
           Discover Authentic Flavors
         </h1>
         
-        <p className="text-xl md:text-2xl mb-8 text-white">
+        <p className="text-l md:text-2xl -mt-4 mb-8 text-white">
           Authentic flavors from the heart of Punjab
         </p>
         
@@ -199,6 +178,8 @@ const Index = () => {
       </div>
     </div>
   </div>
+
+  
 
   {/* Animation Style */}
   <style>{`
@@ -313,7 +294,26 @@ const Index = () => {
 </AnimatePresence>
 
 {/* Featured Products */}
-<section className="bg-beige py-10 px-4">
+<section className="bg-beige py-10 px-4 relative">
+  {/* New Top Left Image */}
+  <div className="absolute  -top-30 w-36 h-36 animate-float-slow">
+    <img 
+      src="/Spices/lo1.png" 
+      alt="Decorative Spice" 
+      className="w-full h-full object-contain transform -rotate-12 hover:rotate-0 transition-transform duration-300"
+    />
+  </div>
+
+  <div className="absolute  -right-2 -top-30 w-36 h-36 animate-float-slow">
+    <img 
+      src="/Spices/lo1.png" 
+      alt="Decorative Spice" 
+      className="w-full h-full object-contain transform -rotate-12 hover:rotate-0 transition-transform duration-300"
+    />
+  </div>
+  
+  
+
   <div className="max-w-7xl mx-auto">
     <h2 className="text-4xl font-display font-bold text-spiceBrown text-center mb-16">
       Featured Products
@@ -382,6 +382,25 @@ const Index = () => {
             price: "$9.99",
             image: "/Spices/d3.png",
             category: "Specialty Mixes"
+
+          },{
+            id: 19,
+            name: "Saffron ",
+            price: "$24.99",
+            pricePerKg: "$500/kg",
+            rating: 5.0,
+            image: "/Spices/d1.png",
+            category: "premium",
+            description: "Delicate threads of saffron that bring rich color and flavor."
+          },{
+            id: 20,
+            name: "Saffron T",
+            price: "$24.99",
+            pricePerKg: "$500/kg",
+            rating: 5.0,
+            image: "/Spices/d1.png",
+            category: "premium",
+            description: "Delicate threads of saffron that bring rich color and flavor."
           }
         ].map((product) => (
           <CarouselItem key={product.id} className="pl-4 md:basis-1/5 lg:basis-1/5">
@@ -435,83 +454,141 @@ const Index = () => {
 </section>
 
 {/* Features Section */}
-<section className="bg-cream px-4 relative overflow-hidden">
-  {/* Gradient Background */}
-  <div className="absolute inset-0 opacity-10">
-    <div className="absolute w-[500px] h-[500px] rounded-full bg-gradient-to-r from-blue-800 via-purple-900 to-pink-900 blur-3xl animate-glow-slow left-0 top-0"></div>
-    <div className="absolute w-[500px] h-[500px] rounded-full bg-gradient-to-r from-rose-800 via-amber-500 to-yellow-500 blur-3xl animate-glow-slow-reverse right-0 bottom-0"></div>
+<section className="bg-cream py-12 px-4 relative overflow-hidden">
+  {/* Enhanced Gradient Background with stronger colors */}
+  <div className="absolute inset-0 opacity-20">
+    <div className="absolute w-[600px] h-[600px] rounded-full bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 blur-[100px] animate-glow-slow -left-32 -top-32"></div>
+    <div className="absolute w-[500px] h-[500px] rounded-full bg-gradient-to-r from-rose-600 via-purple-600 to-blue-600 blur-[80px] animate-glow-slow-reverse right-0 bottom-0"></div>
   </div>
 
-  <div className="max-w-7xl mx-auto relative z-10">
+  <div className="max-w-6xl mx-auto relative z-10">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div className="relative w-[580px] h-[580px] flex justify-center items-center">
-        {/* Background SVG */}
-        <svg className="absolute w-full h-full" viewBox="100 0 600 600" xmlns="http://www.w3.org/2000/svg">
-          <path d="M85,240 Q265,60 430,240 T535,465 Q385,615 220,465 T85,240" fill="#F5E6CC">
-            <animate attributeName="d" 
-              values="
-                M85,240 Q265,60 430,240 T535,465 Q385,615 220,465 T85,240;
-                M70,225 Q250,45 415,225 T520,450 Q370,600 205,450 T70,225;
-                M100,255 Q280,75 445,255 T550,480 Q400,630 235,480 T100,255;
-                M85,240 Q265,60 430,240 T535,465 Q385,615 220,465 T85,240" 
-              dur="8s" repeatCount="indefinite" 
-              keyTimes="0;0.3;0.7;1"
-              calcMode="spline" 
-              keySplines="0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1"/>
-          </path>
-        </svg>
-
-        {/* GIF Animation */}
-        <img 
-          src="/Spices/fl.gif"
-          alt="Spices Animation"
-          className="w-64 h-64 relative z-10"
-        />
+      {/* Enhanced Left Column - Image (Smaller size) */}
+      <div className="relative group">
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-br from-sage/30 to-transparent rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
+        
+        {/* Main Image Container (Reduced size) */}
+        <div className="relative w-[500px] h-[500px] flex justify-center items-center transform hover:scale-105 transition-transform duration-300">
+          <div className="absolute inset-0 bg-white/60 backdrop-blur-xl rounded-3xl shadow-2xl"></div>
+          <img 
+            src="/Spices/lo4.png"
+            alt="Spices Animation"
+            className="relative z-10 w-100 h-100 object-contain transform hover:rotate-12 transition-transform duration-500"
+          />
+          
+          {/* Floating Elements (Adjusted sizes) */}
+          
+        </div>
       </div>
 
-      {/* Content on the right */}
-      <div>
-        <h2 className="text-4xl font-display font-bold text-spiceBrown mb-8">
-          Why Choose Our Spices?
-        </h2>
+      {/* Enhanced Right Column - Content (More compact) */}
+      <div className="space-y-8">
+        <div className="space-y-3">
+          <h2 className="text-4xl font-display font-bold text-spiceBrown leading-tight">
+            Why Choose Our 
+            <span className="text-sage block">Premium Spices?</span>
+          </h2>
+          <p className="text-gray-600 text-base leading-relaxed">
+            Experience the authentic flavors of Punjab with our carefully curated selection of premium spices.
+          </p>
+        </div>
+
         <div className="space-y-6">
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center shrink-0">
-              <img src="/Spices/organic-unscreen.gif" alt="Premium Quality" className="w-8 h-8" />
-            </div>
-            <div>
-              <h3 className="text-xl font-display font-bold text-spiceBrown mb-2">Premium Quality</h3>
-              <p className="text-gray-600">Hand-selected premium spices sourced directly from authentic farms.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center shrink-0">
-              <img src="/Spices/chef.gif" alt="Traditional Recipes" className="w-8 h-8" />
-            </div>
-            <div>
-              <h3 className="text-xl font-display font-bold text-spiceBrown mb-2">Traditional Recipes</h3>
-              <p className="text-gray-600">Authentic family recipes passed down through generations.</p>
+          {/* Feature Cards (More compact) */}
+          <div className="transform hover:-translate-y-1 transition-all duration-300">
+            <div className="flex items-start gap-4 group">
+              <div className="w-14 h-14 bg-gradient-to-br from-sage to-sage/50 rounded-xl flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <img src="/Spices/organic-unscreen.gif" alt="Premium Quality" className="w-8 h-8" />
+              </div>
+              <div>
+                <h3 className="text-xl font-display font-bold text-spiceBrown mb-1 group-hover:text-sage transition-colors">
+                  Premium Quality
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Hand-selected premium spices sourced directly from authentic farms.
+                </p>
+              </div>
             </div>
           </div>
           
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center shrink-0">
-              <img src="/Spices/organic.gif" alt="Natural Ingredients" className="w-8 h-8" />
+          <div className="transform hover:-translate-y-1 transition-all duration-300">
+            <div className="flex items-start gap-4 group">
+              <div className="w-14 h-14 bg-gradient-to-br from-spiceBrown to-spiceBrown/50 rounded-xl flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <img src="/Spices/chef.gif" alt="Traditional Recipes" className="w-8 h-8" />
+              </div>
+              <div>
+                <h3 className="text-xl font-display font-bold text-spiceBrown mb-1 group-hover:text-spiceBrown transition-colors">
+                  Traditional Recipes
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Authentic family recipes passed down through generations.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xl font-display font-bold text-spiceBrown mb-2">Natural Ingredients</h3>
-              <p className="text-gray-600">100% natural ingredients with no artificial additives.</p>
+          </div>
+          
+          <div className="transform hover:-translate-y-1 transition-all duration-300">
+            <div className="flex items-start gap-4 group">
+              <div className="w-14 h-14 bg-gradient-to-br from-sage to-sage/50 rounded-xl flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <img src="/Spices/organic.gif" alt="Natural Ingredients" className="w-8 h-8" />
+              </div>
+              <div>
+                <h3 className="text-xl font-display font-bold text-spiceBrown mb-1 group-hover:text-sage transition-colors">
+                  Natural Ingredients
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  100% natural ingredients with no artificial additives.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <style>{`
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    
+    @keyframes float-delayed {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    
+    @keyframes float-slow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    
+    .animate-float {
+      animation: float 5s ease-in-out infinite;
+    }
+    
+    .animate-float-delayed {
+      animation: float-delayed 7s ease-in-out infinite;
+    }
+    
+    .animate-float-slow {
+      animation: float-slow 9s ease-in-out infinite;
+    }
+  `}</style>
 </section>
 
 {/* Our Famous Spices Section */}
 <section className="bg-cream py-20 px-4 relative overflow-hidden">
+  {/* New Top Right Image */}
+  <div className="absolute -left -top-30 w-32 h-32 animate-float-delayed">
+    <img 
+      src="/Spices/lo3.gif" 
+      alt="Animated Spice" 
+      className="w-full h-full object-contain transform rotate-12 hover:rotate-0 transition-transform duration-300"
+    />
+  </div>
+
   {/* Fork SVG in top right corner */}
   <div className="absolute -top-20 -right-64 -z-0 opacity-40">
     <svg width="580" height="580" viewBox="100 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -547,7 +624,7 @@ const Index = () => {
       opts={{
         align: "start",
         loop: true,
-        slidesToScroll: 4
+        slidesToScroll: 5
       }}
     >
       <CarouselContent>
@@ -698,7 +775,17 @@ const Index = () => {
 </section>
 
 {/* Our Recipes Section */}
-<section className="bg-beige py-10 px-4">
+<section className="bg-beige py-10 px-4 relative">
+  {/* New Top Left Image */}
+  {/* New Left Side Image */}
+  <div className="absolute right-10 top-8-translate-y-1/2 w-40 h-40 animate-float">
+    <img 
+      src="/Spices/lo2.png" 
+      alt="Decorative Spice" 
+      className="w-full h-full object-contain transform rotate-12 hover:rotate-0 transition-transform duration-300"
+    />
+  </div>
+
   <div className="max-w-7xl mx-auto">
     <div className="flex items-center justify-center gap-4 mb-16">
       <h2 className="text-4xl font-display font-bold text-spiceBrown text-center">

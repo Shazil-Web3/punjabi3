@@ -135,9 +135,9 @@ const Cart = () => {
                 Secure Checkout
               </Button>
               <div className="flex items-center justify-center gap-4 pt-4">
-                <img src="/payment-icons/visa.svg" alt="Visa" className="h-8" />
-                <img src="/payment-icons/mastercard.svg" alt="Mastercard" className="h-8" />
-                <img src="/payment-icons/paypal.svg" alt="PayPal" className="h-8" />
+                <img src="/Spices/visa.png" alt="Visa" className="h-8 px-2" />
+                <img src="/Spices/card.png" alt="Mastercard" className="px-2 h-8" />
+                <img src="/Spices/paypal.png" alt="PayPal" className="px-2 h-8" />
               </div>
             </div>
           </div>
