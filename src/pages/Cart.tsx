@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useCart } from '@/contexts/CartContext';
 import { Button } from '@/components/ui/button';
 import { Minus, Plus, Trash2, ArrowLeft, ShoppingBag, Lock } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity } = useCart();
+  const navigate = useNavigate();
 
   const total = cartItems.reduce((sum, item) => {
     const price = parseFloat(item.price.replace(/[^0-9.-]+/g, ''));
@@ -15,6 +16,10 @@ const Cart = () => {
 
   const shipping = total > 50 ? 0 : 4.99;
   const finalTotal = total + shipping;
+
+  useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  }, [cartItems]);
 
   return (
     <div className="min-h-screen bg-cream py-8">
@@ -62,7 +67,7 @@ const Cart = () => {
                     <div className="flex justify-between items-start">
                       <div>
                         <h3 className="font-semibold text-xl text-spiceBrown mb-1">{item.name}</h3>
-                        <p className="text-gray-500 text-sm">{item.pricePerKg}</p>
+                        {('pricePerKg' in item) && <p className="text-gray-500 text-sm">{String(item.pricePerKg)}</p>}
                       </div>
                       <p className="text-xl font-semibold text-spiceBrown">{item.price}</p>
                     </div>
@@ -124,7 +129,7 @@ const Cart = () => {
               </div>
               <Button 
                 className="w-full bg-spiceBrown text-cream hover:bg-opacity-90 py-6 text-lg flex items-center justify-center gap-2"
-                onClick={() => window.location.href = '/checkout'}
+                onClick={() => navigate('/checkout')}
               >
                 <Lock className="w-5 h-5" />
                 Secure Checkout

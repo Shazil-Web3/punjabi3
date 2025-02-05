@@ -18,6 +18,7 @@ import SearchResults from '@/components/SearchResults';
 import { Product } from '@/types/types';
 import { products, moreProducts } from '../data/products';
 import { motion, AnimatePresence } from 'framer-motion';
+import type { EmblaOptionsType } from 'embla-carousel'
 
 // Add this CSS class at the top of your file or in your global CSS
 
@@ -55,7 +56,7 @@ const Index = () => {
 
     const interval = setInterval(() => {
       api.scrollNext();
-    }, 7000); // Changed from 4000 to 5000ms for slower transitions
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [api]);
@@ -113,6 +114,14 @@ const Index = () => {
     
     setSearchResults(filtered);
     setIsSearching(true);
+  };
+
+  const carouselOptions: EmblaOptionsType = {
+    align: "start",
+    loop: true,
+    skipSnaps: false,
+    slidesToScroll: 1,
+    containScroll: "trimSnaps"
   };
 
   return (
@@ -310,16 +319,13 @@ const Index = () => {
       Featured Products
     </h2>
     
-    <Carousel 
-      className="w-full max-w-6xl mx-auto relative group"
+    <Carousel
+      opts={carouselOptions}
+      className="w-full relative group"
       setApi={setApi}
-      opts={{
-        align: "start",
-        loop: true,
-        slidesToScroll: 5
-      }}
+      
     >
-      <CarouselContent>
+      <CarouselContent className="-ml-4">
         {[
           {
             id: 1,
@@ -378,7 +384,7 @@ const Index = () => {
             category: "Specialty Mixes"
           }
         ].map((product) => (
-          <CarouselItem key={product.id} className="md:basis-1/5">
+          <CarouselItem key={product.id} className="pl-4 md:basis-1/5 lg:basis-1/5">
             <Link 
               to={`/product/${product.id}`}
               className="block relative group cursor-pointer"
@@ -524,7 +530,7 @@ const Index = () => {
             dur="5s" 
             repeatCount="indefinite" 
             calcMode="spline"
-            keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"/>
+            keySplines="0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1"/>
         </path>
       </g>
     </svg>

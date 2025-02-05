@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { useAuth } from '@/contexts/AuthContext';
 import { toast } from 'sonner';
+import { ArrowLeft } from 'lucide-react';
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -30,13 +31,14 @@ const SignUp = () => {
     }
   };
 
+  
   return (
     <div className="min-h-screen relative flex items-center px-4 overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0 scale-110 transform"
         style={{
-          backgroundImage: "url('/public/spices/ooo.png')", // Update with your image path
+          backgroundImage: "url('/Spices/ooo.png')", // Update with your image path
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -44,6 +46,7 @@ const SignUp = () => {
         }}
       />
       
+
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 z-10" />
       
@@ -52,6 +55,8 @@ const SignUp = () => {
         <h2 className="text-3xl font-display font-bold text-spiceBrown text-center mb-8">
           Create Account
         </h2>
+        
+        
         
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>

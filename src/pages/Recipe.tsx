@@ -1,7 +1,18 @@
 import React from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
-import { Clock, ChefHat, Users, Utensils } from 'lucide-react';
+import { 
+  Clock, 
+  ChefHat, 
+  Users, 
+  Utensils,
+  Flame,
+  Timer,
+  Scale,
+  Info,
+  Tag,
+  
+} from 'lucide-react';
 
 // Recipe data
 export const recipes = [
@@ -258,73 +269,116 @@ const Recipe = () => {
       <Navbar />
       
       <main className="max-w-7xl mx-auto px-4 py-12">
-        {/* Hero Section */}
-        <div className="relative h-[400px] rounded-2xl overflow-hidden mb-12">
+        {/* Hero Section with Enhanced Styling */}
+        <div className="relative h-[500px] rounded-3xl overflow-hidden mb-12 shadow-2xl">
           <img 
             src={recipe.image}
             alt={recipe.name}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          <div className="absolute bottom-8 left-8 right-8">
-            <h1 className="text-5xl font-display font-bold text-cream mb-4">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <div className="absolute bottom-12 left-12 right-12">
+            <div className="flex items-center space-x-3 mb-4">
+              <Tag className="w-5 h-5 text-sage" />
+              <span className="text-cream/90 text-sm font-medium tracking-wider uppercase">
+                {recipe.category}
+              </span>
+            </div>
+            <h1 className="text-6xl font-display font-bold text-cream mb-6">
               {recipe.name}
             </h1>
-            <div className="flex items-center space-x-6">
-              <span className="text-cream/90 flex items-center">
-                <Clock className="w-5 h-5 mr-2" />
-                {recipe.time}
-              </span>
-              <span className="text-cream/90 flex items-center">
-                <ChefHat className="w-5 h-5 mr-2" />
-                {recipe.difficulty}
-              </span>
-              <span className="text-cream/90 flex items-center">
-                <Users className="w-5 h-5 mr-2" />
-                Serves {recipe.servings}
-              </span>
+            <p className="text-xl text-cream/90 mb-8 max-w-3xl">
+              {recipe.description}
+            </p>
+            <div className="flex items-center space-x-8">
+              <div className="flex items-center bg-black/30 rounded-full px-4 py-2">
+                <Clock className="w-5 h-5 mr-2 text-sage" />
+                <span className="text-cream/90">{recipe.time}</span>
+              </div>
+              <div className="flex items-center bg-black/30 rounded-full px-4 py-2">
+                <ChefHat className="w-5 h-5 mr-2 text-sage" />
+                <span className="text-cream/90">{recipe.difficulty}</span>
+              </div>
+              <div className="flex items-center bg-black/30 rounded-full px-4 py-2">
+                <Users className="w-5 h-5 mr-2 text-sage" />
+                <span className="text-cream/90">Serves {recipe.servings}</span>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Recipe Content */}
+        {/* Recipe Content with Enhanced Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Ingredients */}
+          {/* Ingredients Panel */}
           <div className="lg:col-span-1">
-            <h2 className="text-2xl font-display font-bold text-spiceBrown mb-6">
-              Ingredients
-            </h2>
-            <ul className="space-y-3">
-              {recipe.ingredients.map((ingredient, index) => (
-                <li 
-                  key={index}
-                  className="flex items-center text-gray-700"
-                >
-                  <Utensils className="w-4 h-4 mr-3 text-sage" />
-                  {ingredient}
-                </li>
-              ))}
-            </ul>
+            <div className="bg-white rounded-2xl p-8 shadow-lg sticky top-8">
+              <div className="flex items-center space-x-3 mb-6">
+                
+                <h2 className="text-2xl font-display font-bold text-spiceBrown">
+                  Ingredients
+                </h2>
+              </div>
+              <ul className="space-y-4">
+                {recipe.ingredients.map((ingredient, index) => (
+                  <li 
+                    key={index}
+                    className="flex items-center text-gray-700 p-3 rounded-lg hover:bg-cream/50 transition-colors"
+                  >
+                    <Utensils className="w-4 h-4 mr-3 text-sage flex-shrink-0" />
+                    <span className="text-gray-600">{ingredient}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          {/* Instructions */}
+          {/* Instructions Panel */}
           <div className="lg:col-span-2">
-            <h2 className="text-2xl font-display font-bold text-spiceBrown mb-6">
-              Instructions
-            </h2>
-            <ol className="space-y-6">
-              {recipe.instructions.map((instruction, index) => (
-                <li 
-                  key={index}
-                  className="flex"
-                >
-                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-sage/10 text-sage flex items-center justify-center font-medium mr-4">
-                    {index + 1}
-                  </span>
-                  <p className="text-gray-700 pt-1">{instruction}</p>
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="flex items-center space-x-3 mb-8">
+                <Flame className="w-6 h-6 text-spiceBrown" />
+                <h2 className="text-2xl font-display font-bold text-spiceBrown">
+                  Cooking Instructions
+                </h2>
+              </div>
+              <ol className="space-y-8">
+                {recipe.instructions.map((instruction, index) => (
+                  <li 
+                    key={index}
+                    className="flex group"
+                  >
+                    <span className="flex-shrink-0 w-10 h-10 rounded-full bg-sage text-white flex items-center justify-center font-medium mr-4 group-hover:bg-spiceBrown transition-colors">
+                      {index + 1}
+                    </span>
+                    <div className="flex-1">
+                      <p className="text-gray-700 pt-1 leading-relaxed">
+                        {instruction}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            {/* Additional Tips Section */}
+            <div className="mt-8 bg-sage/10 rounded-2xl p-8">
+              <div className="flex items-center space-x-3 mb-4">
+                <Info className="w-6 h-6 text-sage" />
+                <h3 className="text-xl font-display font-bold text-spiceBrown">
+                  Pro Tips
+                </h3>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-center text-gray-700">
+                  <Timer className="w-4 h-4 mr-3 text-sage" />
+                  <span>Prep all ingredients before starting to cook</span>
                 </li>
-              ))}
-            </ol>
+                <li className="flex items-center text-gray-700">
+                  <Scale className="w-4 h-4 mr-3 text-sage" />
+                  <span>Follow measurements precisely for best results</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </main>

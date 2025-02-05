@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { useAuth } from '@/contexts/AuthContext';
 import { toast } from 'sonner';
+import { ArrowLeft } from 'lucide-react';
 
 const SignIn = () => {
   const [formData, setFormData] = useState({
@@ -29,7 +30,7 @@ const SignIn = () => {
       <div 
         className="absolute inset-0 z-0 scale-110 transform"
         style={{
-          backgroundImage: "url('/public/spices/ooo.png')",
+          backgroundImage: "url('/Spices/ooo.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -39,9 +40,15 @@ const SignIn = () => {
       />
       
       {/* Overlay */}
-       
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40 z-10" />
+      <div className="absolute inset-0 bg-black/40 z-10">
+        <Link 
+          to="/" 
+          className="absolute top-4 left-4 z-30 text-white hover:text-cream flex items-center gap-2"
+        >
+          <ArrowLeft className="w-5 h-5" />
+          Back to Home
+        </Link>
+      </div>
       
       
       {/* Content - Adjusted to left */}

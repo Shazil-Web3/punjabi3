@@ -236,7 +236,13 @@ const Wholesale = () => {
                       </div>
 
                       {/* Order Button */}
-                      <Button className="bg-spiceBrown text-cream hover:bg-opacity-90 w-full py-4 text-lg font-semibold shadow-lg transition-all hover:transform hover:-translate-y-1">
+                      <Button 
+                        className="bg-spiceBrown text-cream hover:bg-opacity-90 w-full py-4 text-lg font-semibold shadow-lg transition-all hover:transform hover:-translate-y-1"
+                        onClick={() => {
+                          const contactSection = document.querySelector('#contact-section');
+                          contactSection?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                      >
                         Request Quote
                       </Button>
                     </div>
@@ -273,7 +279,7 @@ const Wholesale = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 bg-[#821131] relative">
+      <section id="contact-section" className="py-20 px-4 bg-[#821131] relative">
         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-black/5 opacity-70"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">

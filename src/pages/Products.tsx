@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import { Button } from "@/components/ui/button";
 import { toast } from 'sonner';
-import { Heart, Star, ShoppingBag, Package, Leaf, Search, Percent, Award, Clock, Shield, Truck } from 'lucide-react';
+import { Heart, Star, ShoppingBag, Package, Leaf, Search, Percent, Award, Clock, Shield, Truck, Mail, Phone, Facebook, Instagram, Twitter } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
 import { products, moreProducts } from '../data/products';
 import { Product } from '@/types/types';
@@ -164,15 +164,49 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Products Grid Section */}
-      <section className="py-20 px-4 bg-[#C7253E]">
-        {/* Products grid with updated colors */}
-      </section>
+      
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 bg-[#821131]">
-        {/* Benefits content with updated colors */}
-      </section>
+      <footer className="bg-[#821131] text-white py-12 px-4 border-t border-white/10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 className="font-display font-bold text-xl mb-4">Punjabi Spices</h3>
+            <p className="text-white/80">Bringing authentic Punjabi flavors to your kitchen since 1990</p>
+          </div>
+
+          <div>
+            <h4 className="font-bold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              <li><Link to="/" className="hover:text-white/80">Home</Link></li>
+              <li><Link to="/products" className="hover:text-white/80">Products</Link></li>
+              <li><Link to="/recipes" className="hover:text-white/80">Recipes</Link></li>
+              <li><Link to="/wholesale" className="hover:text-white/80">Wholesale</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold mb-4">Contact</h4>
+            <ul className="space-y-2">
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                <span>info@punjabispices.com</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                <span>+1 (555) 123-4567</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold mb-4">Follow Us</h4>
+            <div className="flex gap-4">
+              <a href="#" className="hover:text-white/80"><Facebook className="w-6 h-6" /></a>
+              <a href="#" className="hover:text-white/80"><Instagram className="w-6 h-6" /></a>
+              <a href="#" className="hover:text-white/80"><Twitter className="w-6 h-6" /></a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

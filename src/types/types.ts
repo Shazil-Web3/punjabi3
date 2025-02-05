@@ -12,4 +12,9 @@ export interface Product {
   description?: string;
   quantity?: number;
   discount?: number;
-} 
+}
+
+export interface CartItem extends Product {
+  quantity: number;
+  selectedSize: string;
+}
